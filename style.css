@@ -1,0 +1,68 @@
+/* fluid layout */
+.div-container {
+    width: 60%;
+    margin: 0 auto;
+    background-colour: aqua;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .div-container {
+        width: 80%;
+        background-color:darkgray
+    }
+
+    body{
+        background-color: cyan;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+/* Flexible layout */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: cadetblue ;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    background-color: grey;
+    padding: 20px;
+    margin: 10px;
+    flex: 1; /* This will make the items flexible */
+}
+
+/* Grid Layout */
+.grid-container {
+    -display: grid;
+    grid-template-areas: "header header header"
+     "menu main right" 
+     "footer footer footer"; 
+     grid-gap: 10px;
+     padding: 10px;
+}
+
+.grid-item{grid-area: header; background-color:cadetblue }
+.grid-item{grid-area: menu; background-color:darkgoldenrod }
+.grid-item{grid-area: main; background-color:darkgray }
+.grid-item{grid-area: right; background-color:bisque }
+.grid-item{grid-area: footer; background-color:honeydew }
+
+@media (max-width: 600px){
+    .grid-container {
+        grid-template-areas: 'header'
+        'menu'
+        'main'
+        'right'
+        'footer'
+    
